@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+  {% block body_block %}
+    <h1>WELCOME TO INDEX</h1>
+    <!-- <h2>This is index.html page showing!</h2> -->
+    <ul>
+      <li>出力する要素は最初の変数(text,number。辞書型のキーとしてviewsで設定済)。</li>
+      <li>パイプ以降の処理で、大文字化(upper)や、数値の追加(add)をすることができる。</li>
+    </ul>
+
+    <h1>{{ text | upper }}</h1>
+    <h1>{{ number | add:"99" |add:"10000" }}</h1>
+    <h1>{{ text | cut:'world'}}</h1>
+  {% endblock %}
